@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+{% endblock %}
+
+{% block javascripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{% endblock %}
+
+
+
+{% block title %}SPI PMS{% endblock %}
+
+
+{% block body %}
+<div class="jumbotron text-center">
+  <span class="h2">Production Management System (PMS)</span>
+</div>
+
+<h4>{{ http_method }}</h4>
+
+<form method="post">
+
+  <table class="table table-bordered">
+    <tr>
+      <th>Part</th>
+      <th>Sub-assembly</th>
+      <th>Task</th>
+      <th>Completed</th>
+    </tr>
+
+    <tr>
+      <td rowspan="4">EcoCUBE:</td>
+      <td rowspan="2">Reactor</td>
+      <td>Assembly</td>
+      <td><input type="checkbox"/></td>
+    </tr>
+
+    <tr>
+      <td>Testing</td>
+      <td><input type="checkbox"/></td>
+    </tr>
+
+    <tr>
+      <td rowspan="2">Accessories</td>
+      <td>Assembly</td>
+      <td><input type="checkbox"/></td>
+    </tr>
+
+    <tr>
+      <td>Testing</td>
+      <td><input type="checkbox"/></td>
+    </tr>
+
+  </table>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+  
+</form>
+
+{% endblock %}
